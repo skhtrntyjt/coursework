@@ -1,0 +1,6 @@
+123|6|CHAIR|Near window|Near AC
+14|3|COUCH|VIP room|Private dining
+124|4|BENCH|Center hall|TV nearby
+88|5|CHAIR|Center hall|Near WC
+125|8|COUCH|Near window|Birthday setup
+
