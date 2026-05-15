@@ -11,21 +11,17 @@ import java.util.Scanner;
 public class ReservationDb {
     private static ReservationDb instance = null;
     private List<Reservation> reservations = new ArrayList<>();
-
-    private ReservationDb() {
-
-    }
-    public List<Reservation> getReservation() {
+    private ReservationDb() {}
+    public List<Reservation> getReservations() {
         return new ArrayList<>(reservations);
     }
-
     public static ReservationDb getInstance() {
         if (instance == null) {
             instance = new ReservationDb();
         }
         return instance;
     }
-    public void load(File file) {
+    public void load(File file) throws FileNotFoundException {
         if (!file.exists() || !file.canRead()) {
             throw new IllegalArgumentException("File not found!");
         }
@@ -40,7 +36,6 @@ public class ReservationDb {
             throw new RuntimeException(e);
         }
     }
-
     public void save(File file) {
         if (!file.exists() || !file.canWrite()) {
             throw new IllegalArgumentException("File not found!");
@@ -55,6 +50,4 @@ public class ReservationDb {
             throw new RuntimeException(e);
         }
     }
-
 }
-
