@@ -1,31 +1,27 @@
 package cw;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TablesDb {
-
-    private static TablesDb instance = null;
+public class TableDb {
+    private static TableDb instance = null;
     private List<Table> tables = new ArrayList<>();
-
-    private TablesDb() {
-
-    }
-
+    private TableDb() {}
     public List<Table> getTables() {
         return new ArrayList<>(tables);
     }
-
-    public static TablesDb getInstance() {
+    public static TableDb getInstance() {
         if (instance == null) {
-            instance = new TablesDb();
+            instance = new TableDb();
         }
         return instance;
     }
-
-    public void load(File file) {
+    public void load(File file) throws FileNotFoundException {
         if (!file.exists() || !file.canRead()) {
             throw new IllegalArgumentException("File not found!");
         }
@@ -40,7 +36,6 @@ public class TablesDb {
             throw new RuntimeException(e);
         }
     }
-
     public void save(File file) {
         if (!file.exists() || !file.canWrite()) {
             throw new IllegalArgumentException("File not found!");
@@ -55,5 +50,4 @@ public class TablesDb {
             throw new RuntimeException(e);
         }
     }
-
 }

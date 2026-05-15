@@ -22,7 +22,7 @@ public class Reservation extends DbObject {
 
     public Reservation() {
         status = Status.COMPLETED;
-        dateTime = LocalDateTime.of(2000, 1, 1, 0, 0);
+        dateTime = LocalDateTime.of(1980, 1, 1, 0, 0);
         peopleAmount = 0;
         tableId = 0;
         hours = 0;
@@ -82,7 +82,6 @@ public class Reservation extends DbObject {
         }
         set(status, dateTime, peopleAmount, tableId, hours, email, phoneNumber);
 
-
     }
 
     public int getHours() {
@@ -138,5 +137,3 @@ public class Reservation extends DbObject {
                 '}';
     }
 }
-
-
