@@ -93,7 +93,7 @@ public class Main {
                 newReservation.setPeopleAmount(scanner.nextInt());
             } while (newReservation.getPeopleAmount() > maxPeople
                     && newReservation.getPeopleAmount() < 1);
-            // TODO: REGEX
+            
             System.out.println("Input your phone number:");
             newReservation.setPhoneNumber(scanner.next());
 
