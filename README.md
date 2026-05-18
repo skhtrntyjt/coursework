@@ -16,3 +16,6 @@
 
 * **tables.txt:** `123|6|CHAIR|Near window|Near AC`
 * **reservations.txt:** `PENDING|2026-04-29T14:30|6|123|2|client@email.com|+0630000000`
+
+
+Проект належить Савенко Марині Ім-52
