@@ -17,5 +17,10 @@
 * **tables.txt:** `123|6|CHAIR|Near window|Near AC`
 * **reservations.txt:** `PENDING|2026-04-29T14:30|6|123|2|client@email.com|+0630000000`
 
+Інтегровані лабораторні
+5. Async Array Functions (filter/map)
+Інтегровано у Main.java — методи getTablesByDate() та getTablesById(): для фільтрації масивів
+6. Large Data Processing with Streams
+Інтегровано у ReservationDb.java та TableDb.java — методи load() та save() для читання файлу рядок за рядком без завантаження всього в пам'ять
 
 Проект належить Савенко Марині Ім-52
